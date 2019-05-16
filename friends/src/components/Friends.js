@@ -14,9 +14,13 @@ class Friends extends React.Component {
 
     render() {
         return(
-            <div>Friends</div>
+            <div>{console.log(this.props.friends)}</div>
         )
     }
 }
 
-export default connect(null,{getFriends})(Friends);
+const mapStateToProps = state => ({
+    friends: state.friends
+})
+
+export default connect(mapStateToProps,{getFriends})(Friends);
