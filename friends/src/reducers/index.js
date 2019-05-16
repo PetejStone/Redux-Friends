@@ -1,6 +1,6 @@
 const initialState = {
-    characters: [],
-    fetching: false,
+    friends: [],
+    loading: false,
     error: ''
     // Array characters, Boolean fetching, null error.
   };
