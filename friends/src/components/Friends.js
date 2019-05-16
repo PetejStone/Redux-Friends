@@ -1,9 +1,15 @@
 import React from 'react';
+import {getFriends} from '../actions';
+import {connect} from 'react-redux';
 
 class Friends extends React.Component {
     constructor() {
         super();
-        this.strate = {}
+        this.state = {}
+    }
+
+    componentDidMount() {
+        getFriends()
     }
 
     render() {
@@ -13,4 +19,4 @@ class Friends extends React.Component {
     }
 }
 
-export default Friends;
+export default connect(null,{getFriends})(Friends);

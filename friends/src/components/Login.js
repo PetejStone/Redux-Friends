@@ -25,7 +25,9 @@ class Login extends React.Component {
 
     loggingIn = e => {
         e.preventDefault();
-        console.log(this.state.credentials)
+        this.props.login(this.state.credentials).then(()=>{
+            this.props.history.push('/friends')
+        })
     }
     render() {
         return(
