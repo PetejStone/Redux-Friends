@@ -9,7 +9,7 @@ class Friends extends React.Component {
     }
 
     componentDidMount() {
-        getFriends()
+        this.props.getFriends()
     }
 
     render() {

@@ -23,6 +23,6 @@ export const FETCH_FRIENDS_FAILURE = "FETCH_FRIENDS_FAILURE"
 export const getFriends = () => dispatch => {
     dispatch({type: "FETCH_FRIENDS_START"});
     axiosWithAuth().get('http://localhost:5000/api/friends')
-    .then(res => console.log('hello'))
+    .then(res => console.log(res))
     .catch(err => console.log(err))
 }
