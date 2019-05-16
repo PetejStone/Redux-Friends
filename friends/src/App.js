@@ -3,7 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 import {Route} from 'react-router-dom';
 import Login from './components/Login';
-import PrivateRoute from './PrivateRoute'
+import PrivateRoute from './PrivateRoute';
+import Friends from './components/Friends';
+
 function App(props) {
   return (
     <div className="App">
