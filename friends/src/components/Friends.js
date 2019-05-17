@@ -14,8 +14,14 @@ class Friends extends React.Component {
 
     render() {
         return(
-            <div>{console.log(this.props.friends)}</div>
-        )
+            <div>{this.props.friends.map(friend => 
+                <div className="friend">
+                    <h4>{friend.name}</h4>
+                    <p>Age: {friend.age}</p>
+                    <p>Email: {friend.email}</p>
+                </div>
+                )}</div>
+        );
     }
 }
 

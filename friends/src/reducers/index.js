@@ -50,7 +50,7 @@ const initialState = {
                 return {
                     ...state,
                     fetchingFriends: false,
-                    friends: [...state.friends, action.payload]
+                    friends: action.payload
                 }
             case FETCH_FRIENDS_FAILURE: 
                 return {
