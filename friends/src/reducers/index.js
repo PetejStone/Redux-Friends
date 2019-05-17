@@ -5,7 +5,8 @@ import {
     LOGIN_START,
     FETCH_FRIENDS_START,
     FETCH_FRIENDS_SUCCESS,
-    FETCH_FRIENDS_FAILURE
+    FETCH_FRIENDS_FAILURE,
+    DELETE_FRIEND
   } from "../actions";
   
 
@@ -57,6 +58,12 @@ const initialState = {
                     ...state,
                     fetchingFriends: false,
                     error: action.payload
+                }
+            case DELETE_FRIEND:
+                return {
+                    ...state,
+                    fetchingFriend: false,
+                    friends:  state.friends.filter(friend => friend.id !== action.payload)
                 }
             
         default:

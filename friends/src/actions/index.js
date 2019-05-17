@@ -31,3 +31,12 @@ export const getFriends = () => dispatch => {
         console.log(err.message)
         dispatch({type: FETCH_FRIENDS_FAILURE, payload: err.message})})
 }
+
+export const DELETE_FRIEND = "DELETE_FRIEND";
+
+export const deleteFriend = (id) => {
+    return {
+        type: DELETE_FRIEND,
+        payload: id
+    }
+}
